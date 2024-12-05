@@ -7,9 +7,10 @@ on:
   branches:
    - main
 jobs:
- test:
+ hello-world:
   name: Check the source code
+  # CI上の仮装の環境が必要なので必須
   runs-on: ubuntu-latest
   steps:
-   - name: Test
+   - name: test hello world
      run: echo hello world
