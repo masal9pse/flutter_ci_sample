@@ -10,6 +10,7 @@ jobs:
  hello-world:
   name: output hello world
   # CI上の仮装の環境が必要なので必須
+  # privateリポジトリにしてCIが通るかチェック
   runs-on: ubuntu-latest
   steps:
    - name: test hello world
