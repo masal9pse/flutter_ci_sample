@@ -12,15 +12,16 @@ jobs:
   runs-on: ubuntu-latest
   steps:
   - name: Clone repository
-    uses: actions/checkout@v4
-  - name: Set up Flutter
-    uses: subosito/flutter-action@v2
-    with:
-      # channel: stable
-      flutter-version: 3.24.5
-  - run: flutter --version
-#   https://docs.github.com/ja/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
-  - name: Install dependencies
-    run: flutter pub get
-  - name: Run tests
-    run: flutter test
+    run: flutter --version 
+#     uses: actions/checkout@v4
+#   - name: Set up Flutter
+#     uses: subosito/flutter-action@v2
+#     with:
+#       # channel: stable
+#       flutter-version: 3.24.5
+#   - run: flutter --version
+# #   https://docs.github.com/ja/actions/writing-workflows/workflow-syntax-for-github-actions#jobsjob_idstepsrun
+#   - name: Install dependencies
+#     run: flutter pub get
+#   - name: Run tests
+#     run: flutter test

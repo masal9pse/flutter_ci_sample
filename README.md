@@ -1,16 +1,11 @@
-# flutter_ci_sample
+## try
+Flutterにgithub Actionsを導入してCI,CDのキャッチアップを行う
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## todo
+- CI上で仮装環境を作って、hello-worldを出力 done
+- 環境変数を渡した状態でテストをパス now
+- lib以下のファイルがpushされた場合はCIを実行しない。
+- Android
+    - ビルド done
+- iOS
+    - ビルド
