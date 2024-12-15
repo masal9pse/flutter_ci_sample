@@ -1,0 +1,15 @@
+name: flutter test the source code
+on:
+ push:
+  branches:
+   - main
+ pull_request:
+  branches:
+   - main
+jobs:
+ build-ios:
+#   name: output hello world 
+  runs-on: ubuntu-latest
+  steps: 
+    - name: ios impl
+      run: umimpl

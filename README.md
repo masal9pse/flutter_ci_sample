@@ -1,3 +1,5 @@
+Flutter技術検証用リポジトリ
+
 ## try
 Flutterにgithub Actionsを導入してCI,CDのキャッチアップを行う
 
