@@ -25,4 +25,8 @@ jobs:
     run: flutter test
   - name: check path
     run: pwd
+  - name: create file
+    run: | 
+        cd /home/runner/work/flutter_ci_sample/flutter_ci_sample
+        touch test.md
   
