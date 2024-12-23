@@ -23,10 +23,6 @@ jobs:
     run: flutter pub get
   - name: Run tests
     run: flutter test
-  - name: check path
-    run: pwd
-  - name: create file
-    run: | 
-        cd /home/runner/work/flutter_ci_sample/flutter_ci_sample
-        touch test.md
+  - name: Build Android
+    run: flutter build apk --release
   
