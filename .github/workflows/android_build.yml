@@ -26,7 +26,7 @@ jobs:
   - name: check version
     run: |
       cd /usr/lib/jvm/
-      pwd
+      ls
   # - name: Build Android
   #   run: flutter build apk --release
   
