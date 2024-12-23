@@ -27,6 +27,11 @@ jobs:
     run: |
       cd /usr/lib/jvm/
       ls
+  - name: Set up Java
+    uses: actions/setup-java@v2
+    with:
+      java-version: 17
+      distribution: "temurin"
   # - name: Build Android
   #   run: flutter build apk --release
   
