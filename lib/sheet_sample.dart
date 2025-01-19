@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sheet/route.dart';
+// import 'package:sheet/route.dart';
 
 class Book {
   const Book(this.id, this.title, this.author);
@@ -50,29 +51,21 @@ class _GoRouterBooksAppState extends State<GoRouterBooksApp> {
     routes: <GoRoute>[
       GoRoute(
           path: '/',
-          builder: (context, state) {
-            return BooksListScreen(
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            // return MaterialExtendedPage<void>(
+            return CupertinoExtendedPage<void>(
+              // Cu
+              key: state.pageKey,
+              child: BooksListScreen(
                 books: books,
                 onBrigthnessChanged: (Brightness brightness) {
-                  setState(() {
-                    this.brightness = brightness;
-                  });
+                  // setState(() {
+                  //   this.brightness = brightness;
+                  // });
                 },
-              );            
+              ),
+            );
           },
-          // pageBuilder: (BuildContext context, GoRouterState state) {
-          //   return MaterialExtendedPage<void>(
-          //     key: state.pageKey,
-          //     child: BooksListScreen(
-          //       books: books,
-          //       onBrigthnessChanged: (Brightness brightness) {
-          //         setState(() {
-          //           this.brightness = brightness;
-          //         });
-          //       },
-          //     ),
-          //   );
-          // },
           routes: <GoRoute>[
             GoRoute(
               name: 'book',
@@ -81,7 +74,7 @@ class _GoRouterBooksAppState extends State<GoRouterBooksApp> {
                 final String id = state.pathParameters['bid']!;
                 final Book? book =
                     books.firstWhereOrNull((Book b) => b.id == id);
-                return CupertinoSheetPage<void>(
+                return CupertinoSheetPage<void>(                  
                   key: state.pageKey,
                   child: BookDetailsScreen(
                     book: book!,
