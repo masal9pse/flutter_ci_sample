@@ -34,8 +34,10 @@ Route _createRoute() {
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(0.0, 1.0);
       // const end = Offset.zero;
+      // TODO: Page1を残すにはどうすればいい？
       const end = Offset(0.0,0.5);
-      final tween = Tween(begin: begin, end: end);
+      var curve = Curves.bounceIn;
+      final tween = Tween(begin: begin, end: end).chain(CurveTween(curve: curve));
       final offsetAnimation = animation.drive(tween);
       return SlideTransition(
         position: offsetAnimation,
