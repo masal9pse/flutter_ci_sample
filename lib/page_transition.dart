@@ -33,11 +33,15 @@ Route _createRoute() {
     pageBuilder: (context, animation, secondaryAnimation) => const Page2(),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(0.0, 1.0);
-      const end = Offset.zero;
-      // const end = Offset(0.0,0.5);
+      // const end = Offset.zero;
+      const end = Offset(0.0,0.5);
       final tween = Tween(begin: begin, end: end);
       final offsetAnimation = animation.drive(tween);
-      return child;
+      return SlideTransition(
+        position: offsetAnimation,
+        child: child,
+      );
+      // return child;
     },
   );
 }
